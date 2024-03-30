@@ -237,7 +237,6 @@ def myqp_intpoint_proy(Q,F,c,d,verbose=True):
     # s.a.   A*x = b
     #        F*x >= d
     # Q es simétrica positiva definda de orden n
-    # A es matriz mxn tal que rango(A) = m.
     # F matriz pxn.
     # c vector de dimensión n
     # b vector de dimensión m
@@ -245,8 +244,6 @@ def myqp_intpoint_proy(Q,F,c,d,verbose=True):
     #
     # return
     # x vector de dimensión n con el mínimo del problema
-    # y vector de dimensión m y es el multiplicador de
-    #    Lagrange para: A*x . b = 0
     # mu vector de dimensión p y es el multiplicador de Lagrange
     #    para_ f*x -d >= 0
     # z vector de dimensión p tal que z = F*x-d 
