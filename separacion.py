@@ -11,6 +11,7 @@ plt.rc('font', size=16)
 
 myred = "#F95252"
 myblue = "#2ab0ff"
+mygreen = "#3AC08E"
 
 # Cargar base de datos
 df = pd.read_csv('wine.data')
@@ -106,15 +107,7 @@ CT_w = np.dot(X_C, w) + beta
 # Todos tendrían que ser >= 1
 BT_w = np.dot(X_B, w) + beta
 
-# graficar
-plt.rcParams['text.usetex'] = True
-plt.rcParams['text.latex.preamble'] = r'\usepackage{amsfonts}'
-plt.style.use('seaborn-whitegrid')
-plt.rc('font', size=16)
-
-mygreen = "#3AC08E"
-myblue = "#2ab0ff"
-
+#### Graficar
 fig, ax = plt.subplots(figsize=(12,8))
 len_C = np.arange(len(CT_w))
 ax.scatter(len_C+1, CT_w, c=mygreen, label=r"$\mathbb{C}^Tw+\beta$")
@@ -160,12 +153,7 @@ AT_w = np.dot(X_A, w) + beta
 # Todos tendrían que ser >= 1
 CT_w = np.dot(X_C, w) + beta
 
-# graficar
-plt.rcParams['text.usetex'] = True
-plt.rcParams['text.latex.preamble'] = r'\usepackage{amsfonts}'
-plt.style.use('seaborn-whitegrid')
-plt.rc('font', size=16)
-
+#### Graficar
 fig, ax = plt.subplots(figsize=(12,8))
 len_A = np.arange(len(AT_w))
 ax.scatter(len_A+1, AT_w, c=myred, label=r"$\mathbb{A}^Tw+\beta$")
